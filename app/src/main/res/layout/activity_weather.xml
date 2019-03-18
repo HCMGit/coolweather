@@ -11,6 +11,16 @@
         android:id="@+id/bing_pic_img"
         android:scaleType="centerCrop"
         />
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,6 +41,15 @@
             <include layout="@layout/suggestion"/>
         </LinearLayout>
 
-    </ScrollView>
 
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/choose_area_fragment"
+            android:name="com.example.coolweather.ChooseAreaFragment"
+            android:layout_gravity="start"
+            />
+    </android.support.v4.widget.DrawerLayout>
 </FrameLayout>
